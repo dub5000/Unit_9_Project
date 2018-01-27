@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>	
+
+
+	<link rel="stylesheet" type="text/css" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link rel="alternative stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+
+<body>
+	<div class="top-bar">
+		<div class="top-bar-left">
+			<ul class="menu">
+				<!--make this one "Home"-->	
+				<li class="menu-text">Home</li>
+				<!--make this one "Reservations"-->
+				<li><a href="#reservations">Reservations</a></li>
+				<!--make this one "Dine"-->
+				<li><a href="#dine">Location</a></li>
+				<!--make this one "Reviews"-->
+				<li><a href="#reviews">Reviews</a></li>
+				</ul>
+		</div>
+	</div>
+	
+	<br>
+
+	<div id="heroic-text">
+			<h1>Monk's Cafe</h1>
+			<h2 class="subheader">"The Coffee Shop"</h2>
+	</div>
+
+<!--this is the hero image-->
+	<div class="row">
+    	<div class="twelve columns"><br />
+        	<img src="http://circuits-assets.generalassemb.ly/prod/asset/5475/toms-restaurant.jpg" alt="slide image">
+    	</div>
+	</div>
+
+	<div id="reservations">
+		<div class="large primary">
+			<div class="text-center">
+				<h2>Reservations</h2>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+	  	<div class="small-6 columns text-center">
+	  		<h3>Make a Reservation</h3>
+			<div class="input-group">
+  				<span class="input-group-label">Name</span>
+  				<input class="input-group-field" type="number">
+			</div>
+			<div class="input-group">
+  				<span class="input-group-label">Day</span>
+  				<input class="input-group-field" type="text">
+			</div>
+				<div class="button expanded">
+    			<a class="button large expanded" href="">Submit</a>
+    		</div>	
+	  	</div>
+
+	  	<div class="small-6 columns text-center">
+	  		<h3>Existing Reservations</h3>
+			<table>
+			  <thead>
+			    <tr>
+			      <th width="400">Name</th>
+			      <th width="400">Day</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <td>Blank</td>
+			      <td>Blank</td>
+			    </tr>
+			    <tr>
+			      <td>Blank</td>
+			      <td>Blank</td>
+			    </tr>
+			    <tr>
+			      <td>Blank</td>
+			      <td>Blank</td>
+			    </tr>
+			    <tr>
+			      <td>Blank</td>
+			      <td>Blank</td>
+			    </tr>
+			    <tr>
+			      <td>Blank</td>
+			      <td>Blank</td>
+			    </tr>
+			  </tbody>
+			</table>
+	  	</div>
+	</div>
+
+	<div id="dine">
+		<div class="large primary">
+			<div class="text-center">
+				<h2>Come Dine With Us</h2>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+    	<div class="twelve columns"><br />
+		    <div id="map"></div>
+		    <script>
+		      function initMap() {
+		        var uluru = {lat: 40.8054491, lng: -73.9654415};
+		        var map = new google.maps.Map(document.getElementById('map'), {
+		          zoom: 11,
+		          center: uluru
+		        });
+		        var marker = new google.maps.Marker({
+		          position: uluru,
+		          map: map
+		        });
+		      }
+		    </script>
+		    <script async defer
+		    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRdkkXZVFGvGjMcflmq2FFfBFMUDq_Jyg&callback=initMap">
+		    </script>
+    	</div>
+	</div>
+
+	<div id="reviews">
+		<div class="row">
+			<div class="large primary">
+				<div class="text-center">
+					<h2>Customer Reviews</h2>
+				</div>
+			</div>
+	  	<div class="small-6 columns text-center">
+	  		<div class="row">
+	    		<div class="twelve columns"><br />
+	        		<img src="http://circuits-assets.generalassemb.ly/prod/asset/5474/jerry.jpg" alt="slide image">
+	    		</div>
+			</div>
+			
+	  	</div>
+
+	  	<div class="small-6 columns text-center">
+			<h5>The food was amazing!</h5>
+			<h5>I'd kill a man to eat here again. The Reuben is UFB!</h5>
+			<h5>Classic location, top notch service!</h5>
+			<h5>Wish they were open 24-7, I'd move in!</h5>
+	  	</div>
+	</div>
+
+	</div>	
+
+</body>
+
+<!--GOOGLE MAPS API KEY
+AIzaSyDRdkkXZVFGvGjMcflmq2FFfBFMUDq_Jyg
+-->
